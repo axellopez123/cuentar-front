@@ -1,4 +1,5 @@
-const API_BASE_URL = '/api/v1';
+const BACKEND_URL = (import.meta.env.VITE_API_URL || 'https://cuentar-back.arwax.pro').replace(/\/+$/, '');
+const API_BASE_URL = `${BACKEND_URL}/api/v1`;
 
 export class ApiError extends Error {
   status: number;
